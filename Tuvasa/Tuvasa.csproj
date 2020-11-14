@@ -14,4 +14,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\MTG\Controllers\" />
+    <Folder Include="Areas\MTG\Data\" />
+    <Folder Include="Areas\MTG\Models\" />
+    <Folder Include="Areas\MTG\Views\" />
+  </ItemGroup>
+
 </Project>
