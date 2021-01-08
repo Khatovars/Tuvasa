@@ -4,6 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Tuvasa.Areas.BoardGameGames.Models;
 
 namespace Tuvasa.Data
 {
@@ -13,6 +14,7 @@ namespace Tuvasa.Data
             : base(options)
         {
         }
+        public DbSet<Tuvasa.Areas.BoardGameGames.Models.Player> Player { get; set; }
     }
 
     public class AppUser : IdentityUser

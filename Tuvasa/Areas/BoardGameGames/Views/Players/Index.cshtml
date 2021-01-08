@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Tuvasa.Areas.BoardGameGames.Models.Player>
+
+@{
+    ViewData["Title"] = "Gracze";
+}
+
+<h1>Lista planszówkowych graczy</h1>
+
+<p>
+    <a class="nav-link text-dark" asp-area="BoardGameGames" asp-controller="Players" asp-action="CreatePlayer">Dodaj nowego planszówkowicza</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlayerName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
+            </td>
+            <td>
+                <a asp-action="EditPlayer" asp-route-id="@item.PlayerID">Edytuj</a> @*|
+        <a asp-action="PlayerDetails" asp-route-id="@item.PlayerID">Szczegóły</a> |
+        <a asp-action="DeletePlayer" asp-route-id="@item.PlayerID">Usuń</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
